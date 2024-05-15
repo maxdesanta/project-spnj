@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absurd</title>
+
+    <!-- import font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- import box icon -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <!-- import tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#401D19',
+                        secondary: '#62403c',
+                        font: "#ffe7e0",
+                        acent: "#FF682C",
+                        btnColor: "#ee6c4d",
+                    },
+                    fontFamily: {
+                        roboto: ['Roboto'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-roboto">
+    <!-- header -->
+    <header class="flex justify-between items-center lg:px-8 lg:py-4 px-4 py-2 bg-primary text-font">
+        <!-- logo -->
+        <h1 class="lg:text-3xl cursor-pointer text-xl">Absurd</h1>
+
+        <!-- navigasi -->
+        <nav class="flex lg:flex-row lg:items-center lg:w-auto lg:gap-10 lg:opacity-100 lg:static absolute top-[8%] right-0 left-0 bg-primary md:w-full p-3 items-center flex-col gap-5 opacity-0">
+            <ul class="flex lg:flex-row flex-col lg:gap-5 gap-y-3 justify-center">
+                <li class="hover:text-acent">
+                    <a href="index.html" target="_blank">Home</a>
+                </li>
+                <li class="hover:text-acent">
+                    <a href="about.html" target="_blank">About</a>
+                </li>
+                <li class="hover:text-acent">
+                    <a href="book.html" target="_blank">Book</a>
+                </li>
+            </ul>
+            <button class="bg-btnColor px-5 py-1 rounded">
+                Login
+            </button>
+        </nav>
+        <div class="lg:hidden">
+            <!-- <box-icon name='menu' color='#ffe7e0' onclick="menu(this)"></box-icon> -->
+            <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+        </div>
+    </header>
+    <!-- main -->
+    <main>
+        <div style="background-image: url('https://images.unsplash.com/photo-1585066437548-1507f3f7aa97?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');background-size: cover; background-position: center; height: 87.5vh;">
+            <div class="h-[87.5vh] flex justify-center items-center bg-acent bg-opacity-40">
+                <h1 class="lg:text-4xl font-bold text-font text-xl">Selamat datang di Persputakaan Absurd</h1>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

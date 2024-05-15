@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absurd - Book</title>
+
+    <!-- import font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- import box icon -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+    <!-- import tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#401D19',
+                        secondary: '#62403c',
+                        font: "#ffe7e0",
+                        acent: "#FF682C",
+                        btnColor: "#ee6c4d"
+                    },
+                    fontFamily: {
+                        roboto: ['Roboto'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-roboto bg-secondary">
+    
+    <!-- header -->
+    <header class="flex justify-between items-center lg:px-8 lg:py-4 px-4 py-2 bg-primary text-font">
+        <!-- logo -->
+        <h1 class="lg:text-3xl cursor-pointer text-xl">Absurd</h1>
+
+        <!-- navigasi -->
+        <nav class="flex lg:flex-row lg:items-center lg:w-auto lg:gap-10 lg:opacity-100 lg:static absolute top-[8%] right-0 left-0 bg-primary md:w-full p-3 items-center flex-col gap-5 opacity-0">
+            <ul class="flex lg:flex-row flex-col lg:gap-5 gap-y-3 justify-center">
+                <li class="hover:text-acent">
+                    <a href="index.html" target="_blank">Home</a>
+                </li>
+                <li class="hover:text-acent">
+                    <a href="about.html" target="_blank">About</a>
+                </li>
+                <li class="hover:text-acent">
+                    <a href="book.html" target="_blank">Book</a>
+                </li>
+            </ul>
+            <button class="bg-btnColor px-5 py-1 rounded">
+                Login
+            </button>
+        </nav>
+        <div class="lg:hidden">
+            <!-- <box-icon name='menu' color='#ffe7e0' onclick="menu(this)"></box-icon> -->
+            <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+        </div>
+    </header>
+    <!-- main -->
+    <main class="min-h[100vh] px-8 py-4">
+        <!-- fungsi mencari dan sorting data -->
+        <div class="flex lg:justify-between lg:flex-row flex-col items-center">
+            <!-- mencari data -->
+            <div class="bg-primary flex items-center gap-2 py-2 px-3 rounded-lg w-full lg:w-[300px]">
+                <box-icon name='search-alt-2' color='#ee6c4d'></box-icon>
+                <input type="text" placeholder="Search..." class="outline-none border-none bg-primary text-font placeholder:text-font">
+            </div>
+            <!-- mensorting data -->
+            <div class="relative min-w-60 m-8 w-full lg:w-[100px]">
+                <div class="flex justify-between item-center bg-primary p-3 rounded-lg cursor-pointer" id="dropdown-toggle">
+                    <span class="text-font text-md font-medium" id="dropdown-title-sort">Sort</span>
+                    <box-icon type='solid' name='down-arrow' color='#ee6c4d' size="xs"></box-icon>
+                </div>
+                <ul class="bg-[#8c514a] px-2 py-1 rounded-lg text-font absolute top-16 left-[50%] w-full translate-x-[-50%] hidden transition delay-75 z-10" id="dropdown-menu">
+                    <li class="py-2 cursor-pointer" id="item-sort-a">A - Z</li>
+                    <li class="py-2 cursor-pointer" id="item-sort-z">Z - A</li>
+                </ul>
+            </div>
+        </div>
+        <!-- card book layout -->
+        <div class="flex justify-around flex-wrap gap-10">
+            <!-- card book -->
+            <a href="detail.html" target="_blank">
+                <div class="flex flex-col gap-2">
+                    <!-- card image -->
+                    <div>
+                        <img src="assets/1.jpg" class="lg:w-[200px] lg:h-[300px]" alt="buku">
+                    </div>
+                    <div>
+                        <!-- name book -->
+                        <h3 class="text-[#fdf6fd] text-xl lg:line-clamp-1 lg:w-[200px]">7 In 1 Pemograman Web untuk Pemula</h3>
+                        <!-- name author -->
+                        <h4 class="text-font text-md mt-[-5px]">Rohi Abdulloh</h4>
+                    </div>
+                </div>
+            </a>
+            <!-- card book -->
+            <a href="detail.html" target="_blank">
+                <div class="flex flex-col gap-2">
+                    <!-- card image -->
+                    <div>
+                        <img src="assets/1.jpg" class="lg:w-[200px] lg:h-[300px]" alt="buku">
+                    </div>
+                    <div>
+                        <!-- name book -->
+                        <h3 class="text-[#fdf6fd] text-xl lg:line-clamp-1 lg:w-[200px]">7 In 1 Pemograman Web untuk Pemula</h3>
+                        <!-- name author -->
+                        <h4 class="text-font text-md mt-[-5px]">Rohi Abdulloh</h4>
+                    </div>
+                </div>
+            </a>
+            <!-- card book -->
+            <a href="detail.html" target="_blank">
+                <div class="flex flex-col gap-2">
+                    <!-- card image -->
+                    <div>
+                        <img src="assets/1.jpg" class="lg:w-[200px] lg:h-[300px]" alt="buku">
+                    </div>
+                    <div>
+                        <!-- name book -->
+                        <h3 class="text-[#fdf6fd] text-xl lg:line-clamp-1 lg:w-[200px]">7 In 1 Pemograman Web untuk Pemula</h3>
+                        <!-- name author -->
+                        <h4 class="text-font text-md mt-[-5px]">Rohi Abdulloh</h4>
+                    </div>
+                </div>
+            </a>
+            <!-- card book -->
+            <a href="detail.html" target="_blank">
+                <div class="flex flex-col gap-2">
+                    <!-- card image -->
+                    <div>
+                        <img src="assets/1.jpg" class="lg:w-[200px] lg:h-[300px]" alt="buku">
+                    </div>
+                    <div>
+                        <!-- name book -->
+                        <h3 class="text-[#fdf6fd] text-xl lg:line-clamp-1 lg:w-[200px]">7 In 1 Pemograman Web untuk Pemula</h3>
+                        <!-- name author -->
+                        <h4 class="text-font text-md mt-[-5px]">Rohi Abdulloh</h4>
+                    </div>
+                </div>
+            </a>
+            <!-- card book -->
+            <a href="detail.html" target="_blank">
+                <div class="flex flex-col gap-2">
+                    <!-- card image -->
+                    <div>
+                        <img src="assets/1.jpg" class="lg:w-[200px] lg:h-[300px]" alt="buku">
+                    </div>
+                    <div>
+                        <!-- name book -->
+                        <h3 class="text-[#fdf6fd] text-xl lg:line-clamp-1 lg:w-[200px]">7 In 1 Pemograman Web untuk Pemula</h3>
+                        <!-- name author -->
+                        <h4 class="text-font text-md mt-[-5px]">Rohi Abdulloh</h4>
+                    </div>
+                </div>
+            </a>
+            <!-- card book -->
+            <a href="detail.html" target="_blank">
+                <div class="flex flex-col gap-2">
+                    <!-- card image -->
+                    <div>
+                        <img src="assets/1.jpg" class="lg:w-[200px] lg:h-[300px]" alt="buku">
+                    </div>
+                    <div>
+                        <!-- name book -->
+                        <h3 class="text-[#fdf6fd] text-xl lg:line-clamp-1 lg:w-[200px]">7 In 1 Pemograman Web untuk Pemula</h3>
+                        <!-- name author -->
+                        <h4 class="text-font text-md mt-[-5px]">Rohi Abdulloh</h4>
+                    </div>
+                </div>
+            </a>
+            <!-- card book -->
+            <a href="detail.html" target="_blank">
+                <div class="flex flex-col gap-2">
+                    <!-- card image -->
+                    <div>
+                        <img src="assets/1.jpg" class="lg:w-[200px] lg:h-[300px]" alt="buku">
+                    </div>
+                    <div>
+                        <!-- name book -->
+                        <h3 class="text-[#fdf6fd] text-xl lg:line-clamp-1 lg:w-[200px]">7 In 1 Pemograman Web untuk Pemula</h3>
+                        <!-- name author -->
+                        <h4 class="text-font text-md mt-[-5px]">Rohi Abdulloh</h4>
+                    </div>
+                </div>
+            </a>
+            <!-- card book -->
+            <a href="detail.html" target="_blank">
+                <div class="flex flex-col gap-2">
+                    <!-- card image -->
+                    <div>
+                        <img src="assets/1.jpg" class="lg:w-[200px] lg:h-[300px]" alt="buku">
+                    </div>
+                    <div>
+                        <!-- name book -->
+                        <h3 class="text-[#fdf6fd] text-xl lg:line-clamp-1 lg:w-[200px]">7 In 1 Pemograman Web untuk Pemula</h3>
+                        <!-- name author -->
+                        <h4 class="text-font text-md mt-[-5px]">Rohi Abdulloh</h4>
+                    </div>
+                </div>
+            </a>
+            <!-- card book -->
+            <a href="detail.html" target="_blank">
+                <div class="flex flex-col gap-2">
+                    <!-- card image -->
+                    <div>
+                        <img src="assets/1.jpg" class="lg:w-[200px] lg:h-[300px]" alt="buku">
+                    </div>
+                    <div>
+                        <!-- name book -->
+                        <h3 class="text-[#fdf6fd] text-xl lg:line-clamp-1 lg:w-[200px]">7 In 1 Pemograman Web untuk Pemula</h3>
+                        <!-- name author -->
+                        <h4 class="text-font text-md mt-[-5px]">Rohi Abdulloh</h4>
+                    </div>
+                </div>
+            </a>
+            <!-- card book -->
+            <a href="detail.html" target="_blank">
+                <div class="flex flex-col gap-2">
+                    <!-- card image -->
+                    <div>
+                        <img src="assets/1.jpg" class="lg:w-[200px] lg:h-[300px]" alt="buku">
+                    </div>
+                    <div>
+                        <!-- name book -->
+                        <h3 class="text-[#fdf6fd] text-xl lg:line-clamp-1 lg:w-[200px]">7 In 1 Pemograman Web untuk Pemula</h3>
+                        <!-- name author -->
+                        <h4 class="text-font text-md mt-[-5px]">Rohi Abdulloh</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
